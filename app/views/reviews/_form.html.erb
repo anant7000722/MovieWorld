@@ -11,17 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :rating %>
-    <%= form.number_field :rating, id: :review_rating %>
+  <div class="form-group">
+    <div id="star-rating"></div>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :comment %>
-    <%= form.text_area :comment, id: :review_comment %>
+    <%= form.text_area :comment, id: :review_comment, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit "Submit", class: "btn btn-primary" %>
   </div>
 <% end %>
+
+<script>
+  $('#star-rating').raty({
+    path:'/assets/',
+    scoreName: 'review[rating]'
+ });
+</script>

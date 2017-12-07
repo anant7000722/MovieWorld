@@ -11,36 +11,36 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :movie_title %>
+    <%= form.text_field :title, id: :movie_title, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_area :description, id: :movie_description %>
+    <%= form.text_area :description, id: :movie_description, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :movie_length %>
-    <%= form.text_field :movie_length, id: :movie_movie_length %>
+    <%= form.text_field :movie_length, id: :movie_movie_length, class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :director %>
-    <%= form.text_field :director, id: :movie_director %>
+    <%= form.text_field :director, id: :movie_director, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :rating %>
-    <%= form.text_field :rating, id: :movie_rating %>
+    <%= form.text_field :rating, id: :movie_rating, class: "form-control"%>
   </div>
-  <div class = "field">
+  <div class = "form-group">
     <%= form.label :image %><br>
     <%= form.file_field :image %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit "Submit", class: "btn btn-primary" %>
   </div>
 <% end %>
